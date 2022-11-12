@@ -1,0 +1,27 @@
+---
+title: "HW1.Rmd"
+author: "Xin Tang"
+date: "2022-11-12"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+# a brief description of your past experiences, if any, of using R, RStudio, R Markdown, Git, Github, ggplot2 and dplyr
+I can say that I almost do not have any past experiences in R, but I have used Github before this course. So It is a lot of things to learn in R for me.
+
+# a plot, using ggplot, of some aspect of a data-set. 
+I use this table gotten from "https://www.kaggle.com/datasets/awodijitemitope/steps-count-for-fitness-journey-dataset". 
+It is a raw .csv file to record training data of a person every day.
+I this plot, we can see steps and calories is almost linear correlated with each other, which makes sense!
+So it proves that the more steps the more calories are consumed.
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+Steps_daily <- read_csv("Steps Export_ 3-17-21to9-23-22.csv")
+ggplot(Steps_daily, aes(x=Step_Count, y=Calories))+geom_point()
+
+sessionInfo()
+
+```
+
